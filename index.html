@@ -2,10 +2,12 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Estrutura de dados em Python</title>
+    <title>Python</title>
     <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container text-center">
     <header>
         <nav class="menu">
             <ul>
@@ -16,74 +18,226 @@
             </ul>
         </nav>
     </header>
-    <section class="banner">
-        <div>
-            <h1>Estrutura de Dados em Python</h1>
+    
+        <div class="row">
+        <div class="col">
+            <h1> Tutorial Python</h1>
             
             <img src="python.png" alt="Aqui tem o logo do python">
         </div>
-        <div>
-            <p>Estrutura de dados é a maneira que os dados são organizados em um sistema. Neste tutorial falaremos em lista, tuplas e dicionários.</p>               
+        <div class="col">
+            <p>Neste tutorial falaremos sobre Estrutura de dados, Funções, Matriz, Ordenação e busca.</p>               
         </div>
-    </section>
+    </div>
+
     <section class="flexrow">
         <label>Curso de Python </label><icon></icon>
         <label>Nivel : </label><p>Intermediário</p><icon></icon>
         <label>Tempo de Leitura :</label><p>1hr<icon></icon></p>
         <label>Avaliação :</label><img src="" alt="nota">
     </section>
-    <section class="flexrow">
-        <div><img src="" alt="aqui temos uma capa de lista"></div>
-        <div><img src="" alt="aqui temos uma capa de tupla"></div>
-        <div><img src="" alt="aqui temos uma capa de dicionário"></div>
+    <div class="container text-center">
+    <div class="row ">
+        <div class="col">
+            <img src="img/funcoes.jpg" class="img-fluid" alt="" srcset="">
+        </div>
+        <div class="col">
+            <img src="img/matriz.png" class="img-fluid" alt="" srcset="">
+        </div>
+        <div class="col">
+            <img src="img/ordenacao.jpg" class="img-fluid" alt="" srcset="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="img/tupla.png" class="img-fluid" alt="" srcset="">
+        </div>
+        <div class="col">
+            <img src="img/dicionario.png" class="img-fluid" alt="" srcset="">
+        </div>
+        <div class="col">
+            <img src="img/lista.png" class="img-fluid" alt="" srcset="">
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="col-3 mx-auto">
+            <img src="img/busca.png" class="img-fluid " alt="" srcset="">
+        </div>
         <figcaption>Fonte : https://www.computersciencemaster.com.br/</figcaption>
-    </section>
+    </div>
+    </div>
     <section>
         <div>
             <h2>Estrutura de dados</h2>
             <icon></icon>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut consequuntur, enim explicabo dolor voluptatem deleniti ipsa facilis! Mollitia debitis enim eveniet eum reprehenderit adipisci tenetur delectus possimus doloribus expedita! Laboriosam.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate sunt itaque animi, illum qui eligendi? Inventore animi vero repellat, totam deserunt tempora architecto beatae tempore dignissimos, repellendus, debitis pariatur.</p>
-        <code>
-            lista = [] #Declaração de uma lista
-            tupla = () # Delaração de uma tupla
-            dicionário = {} # Declaração de um dicionário
-        </code>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate sunt itaque animi, illum qui eligendi? Inventore animi vero repellat, totam deserunt tempora architecto beatae tempore dignissimos, repellendus, debitis pariatur.</p>
-        <code>
-            lista = [] #Declaração de uma lista
-            tupla = () # Delaração de uma tupla
-            dicionário = {} # Declaração de um dicionário
-        </code>
+        <p class=" text-left">
+            Existem estrutura de dados nos mais diversos tipos de linguagem como javascript,java,php e entre outras.
+             O que muda é a maneira como são declaradas. Logo abaixo temos um exemplo que declara uma lista, uma tupla ou um dicionário de forma mais simples.
+        </p>
+        <div class="bg-dark ">
+        <p>
+            <code class="row ">lista = [] # Declaração de uma lista</code>
+        </p>
+        <p>
+            <code class="row ">tupla = () # Delaração de uma tupla</code>
+        </p>
+        <p>
+            <code class="row ">dicionário = {} # Declaração de um dicionário</code>
+        </p>
+    </div>
+        <p>
+            Podemos ainda declarar de uma forma mais detalhada deixando explicito a extrutura que está sendo definida.
+        </p>
+        <div class="bg-dark ">
+            <p>
+                <code class="row ">lista = list() #Declaração de uma lista mais detalhada</code>
+            </p>
+            <p>
+                <code class="row">tupla = tuple() # Delaração de uma tupla mais detalhada</code>
+            </p>
+            <p>
+                <code class="row ">dicionário = dict({}) # Declaração de um dicionário mais detalhado</code>
+            </p>
+    </div>
     </section>
     <section>
-        <div>
-            <h2>Metodos para Manipulação de dados</h2>
-            <icon></icon>
+        <div class="row bg-secondary" >
+            <div class="col-11">
+            <h2 class=" text-warning ">Lista</h2>
+            </div>
+           <div class="col-1 bg-warning"></div>
         </div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam mollitia officiis quaerat aliquam cumque distinctio molestiae repellendus? Eos, blanditiis eligendi libero numquam voluptatem obcaecati culpa nam vel. Libero, sed magni!</p>
-        <table>
-            <thead>
-                <th>Função</th>
+        <p class="text-start"> Lista é um conjunto sequencial de elementos que podem ter valores de qualquer tipo, strings,float, int, incluindo outras listas.</p>
+        <p class="text-start bg-dark ">
+            <code class="">
+                lista = [10,10,2,3,9,4,8] # Lista
+            </code>
+        </p>
+
+        <div class="row ">
+            <div class="bg-secondary col-11">
+            <h2 class="  text-start text-warning">Métodos para Manipulação de dados</h2>
+            </div>
+            <div class="col-1 bg-warning"></div>
+        </div>
+        <p class="text-start">
+            Alguns métodos que auxiliam na adição, edição e remoção dos dos dado dentro de uma lista, tupla ou dicionário    
+        </p>
+        <table class="table">
+            <thead class="text-secundary">
+                <th >Função</th>
                 <th>Descrição</th>
+                <th>Exemplo</th>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><code >len</code></td>
+                    <td><code class="text-primary"># Retorna o tamanho da lista</code></td>
+                    <td>
+                        <code class="row ">l=[1,2,3,4]</code>
+                        <code class="row ">
+                            len(l) # Retorna 4   
+                            </code>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><code>min</code></td>
+                    <td><code class="text-primary"># Retorna o menor valor da list</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            min(l) # Retorna 10  
+                            </code>
+                        </div>
+                    </td>
+                </tr>a
+                <tr>
+                    <td><code>max</code></td>
+                    <td><code class="text-primary"># Retorna o maior valor da lista</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            max(l) # Retorna 40  
+                            </code>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><code>sum</code></td>
+                    <td><code class="text-primary"># Retorna a soma dos elementos da lista</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            sum(l) # Retorna  100
+                            </code>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><code>append</code></td>
+                    <td><code class="text-primary">Adiciona um novo valor no final da lista</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            l.append(100) # Adiciona o valor 100 ao final da lista
+                        </code>
+                        <code class="row ">
+                            print(l) # Retorna a lista [10,40,30,20,100] com o valor já adicionado
+                        </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>extend</code></td>
+                    <td><code class="text-primary"># Insere uma lista no final de outra lista</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20,100]</code>
+                        <code class="row ">
+                            l.extend([5,6,15]) # Adiciona lista no final da lista l
+                        </code>
+                        <code class="row ">
+                            print(l) # Retorna lista [10,40,30,20,100,5,6,15] já com os elementos adicionados
+                        </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>del</code></td>
+                    <td><code class="text-primary"># Remove um elemento da lista, dado seu indice</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20,100,5,6,15]</code>
+                        <code class="row ">
+                            del l[0] # Deleta o elemento com o indice                               
+                        </code>
+                        <code class="row ">
+                            print(l) # Retorna a lista [40,30,20,100,5,6,15] sem o elemento 10 que estava no indice 0                          
+                        </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>in</code></td>
+                    <td><code class="text-primary"># Verifica se o valor pertence a lista</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            10 in l # Retorna  True
+                            </code>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sort</code></td>
+                    <td><code class="text-primary"># Ordena os calores da lista em ordem crescente</code></td>
+                    <td>
+                        <code class="row ">l=[10,40,30,20]</code>
+                        <code class="row ">
+                            l.sort() # Ordena em ordem crescente
+                        </code>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -100,5 +254,6 @@
             <icon></icon>
         </div>
     </section>
+</div>
 </body>
 </html>
