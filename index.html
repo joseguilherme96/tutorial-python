@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Python</title>
     <link href="index.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
     <div class="container text-center">
@@ -19,7 +19,7 @@
         </nav>
     </header>
     
-        <div class="row">
+    <div class="row bg-dark text-secondary">
         <div class="col">
             <h1> Tutorial Python</h1>
             
@@ -30,12 +30,12 @@
         </div>
     </div>
 
-    <section class="flexrow">
-        <label>Curso de Python </label><icon></icon>
-        <label>Nivel : </label><p>Intermediário</p><icon></icon>
-        <label>Tempo de Leitura :</label><p>1hr<icon></icon></p>
-        <label>Avaliação :</label><img src="" alt="nota">
-    </section>
+    <div class="row bg-secondary">
+        <div class="col-2 ">Curso de Python </div>
+        <div  class="col-4 ">Nivel : Intermediário</div>
+        <div  class="col-2 ">Tempo de Leitura : 1hr</div>
+        <div  class="col-4 ">Avaliação :</div>
+    </div>
     <div class="container text-center">
     <div class="row ">
         <div class="col">
@@ -75,29 +75,35 @@
             Existem estrutura de dados nos mais diversos tipos de linguagem como javascript,java,php e entre outras.
              O que muda é a maneira como são declaradas. Logo abaixo temos um exemplo que declara uma lista, uma tupla ou um dicionário de forma mais simples.
         </p>
-        <div class="bg-dark ">
+        <div class="bg-dark text-start">
         <p>
-            <code class="row ">lista = [] # Declaração de uma lista</code>
+            <code class="text-secondary">lista = [] </code>
+            <code class="text-info"># Declaração de uma lista</code>
         </p>
         <p>
-            <code class="row ">tupla = () # Delaração de uma tupla</code>
+            <code class="text-secondary">tupla = () </code>
+            <code class="text-info"># Delaração de uma tupla</code>
         </p>
         <p>
-            <code class="row ">dicionário = {} # Declaração de um dicionário</code>
+            <code class="text-secondary">dicionário = {} </code>
+            <code class="text-info"># Declaração de um dicionário</code>
         </p>
     </div>
         <p>
             Podemos ainda declarar de uma forma mais detalhada deixando explicito a extrutura que está sendo definida.
         </p>
-        <div class="bg-dark ">
+        <div class="bg-dark text-start">
             <p>
-                <code class="row ">lista = list() #Declaração de uma lista mais detalhada</code>
+                <code class="text-secondary">lista = list()</code>
+                <code class="text-info"># Declaração de uma lista mais detalhada</code>
             </p>
             <p>
-                <code class="row">tupla = tuple() # Delaração de uma tupla mais detalhada</code>
+                <code class="text-secondary">tupla = tuple() </code>
+                <code class="text-info"># Delaração de uma tupla mais detalhada</code>
             </p>
             <p>
-                <code class="row ">dicionário = dict({}) # Declaração de um dicionário mais detalhado</code>
+                <code class="text-secondary">dicionário = dict({}) </code>
+                <code class="text-info"># Declaração de um dicionário mais detalhado</code>
             </p>
     </div>
     </section>
@@ -110,10 +116,45 @@
         </div>
         <p class="text-start"> Lista é um conjunto sequencial de elementos que podem ter valores de qualquer tipo, strings,float, int, incluindo outras listas.</p>
         <p class="text-start bg-dark ">
-            <code class="">
-                lista = [10,10,2,3,9,4,8] # Lista
+            <code class="text-secondary">
+                lista = [10,10,2,3,9,4,8]
+            </code>
+            <code class="text-info">
+                # Lista
             </code>
         </p>
+        <div class=" row text-start">
+            <h3>Exibindo a lista</h3>
+            <p >Para exibir a lista toda utilizamos o comando <code class="text-secondary">print(lista)</code></p>
+            <p class="bg-dark ">
+                <code class="text-secondary">
+                    print(lista) 
+                </code>
+                <code class="text-info">
+                    # Saida : [10,10,2,3,9,4,8] 
+                </code>
+            </p>
+        </div>
+        <div class=" row text-start">
+            <h3>Exibindo um elemento da lista</h3>
+            <p >Cada elemento possui seu indices. Os indices iniciam na posição 0. Para exibir um dos elementos, basta chamarmos a função <code class="text-secondary">print()</code> 
+                e passar como parâmetro a varialvel lista com o indice do elemento que deverá ser exibido <code class="text-secondary">print(lista[4])</code></p>
+            <p class="bg-dark ">
+                <code class="text-secondary">
+                    lista = [10,10,2,3,9,4,8] 
+                </code>
+                <code class="text-info">
+                    # Lista
+                </code>
+                <br>
+                <code class="text-secondary">
+                    print(lista[4])
+                </code>
+                <code class="text-info">
+                    # Saida : 9
+                </code>
+            </p>
+        </div>
 
         <div class="row ">
             <div class="bg-secondary col-11">
@@ -132,111 +173,183 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><code >len</code></td>
-                    <td><code class="text-primary"># Retorna o tamanho da lista</code></td>
-                    <td>
-                        <code class="row ">l=[1,2,3,4]</code>
-                        <code class="row ">
-                            len(l) # Retorna 4   
-                            </code>
-                        </div>
+                    <td><code class="text-secondary">len</code></td>
+                    <td><code class="text-info"># Retorna o tamanho da lista</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[1,2,3,4]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            len(l)   
+                        </code>
+                        <code class="text-info">
+                            # Saida : 4  
+                        </code>
                     </td>
                 </tr>
                 <tr>
-                    <td><code>min</code></td>
-                    <td><code class="text-primary"># Retorna o menor valor da list</code></td>
+                    <td><cod class="text-secondary">min</code></td>
+                    <td><code class="text-info"># Retorna o menor valor da list</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            min(l)   
+                        </code>
+                        <code class="text-info">
+                            # Saida : 10  
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">max</code></td>
+                    <td><code class="text-info"># Retorna o maior valor da lista</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            max(l)  
+                        </code>
+                        <code class="text-info">
+                            # Saida : 40  
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">sum</code></td>
+                    <td><code class="text-info"># Retorna a soma dos elementos da lista</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            sum(l) 
+                        </code>
+                        <code class="text-info">
+                            # Saida : 100 
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">append</code></td>
+                    <td><code class="text-info">Adiciona um novo valor no final da lista</code></td>
                     <td>
                         <code class="row ">l=[10,40,30,20]</code>
                         <code class="row ">
-                            min(l) # Retorna 10  
-                            </code>
+                             
+                        </code>
+                        <code class="row ">
+                            
+                        </code>
                         </div>
                     </td>
-                </tr>a
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            l.append(100) 
+                        </code>
+                        <code class="text-info">
+                            # Adiciona o valor 100 ao final da lista
+                        </code>
+                        <br>
+                        <code class="text-secondary ">
+                            print(l)
+                        </code>
+                        <code class="text-info">
+                            # Saida : [10,40,30,20,100] com o valor já adicionado
+                        </code>
+                    </td>
+                </tr>
                 <tr>
-                    <td><code>max</code></td>
-                    <td><code class="text-primary"># Retorna o maior valor da lista</code></td>
+                    <td><code class="text-secondary">extend</code></td>
+                    <td><code class="text-info"># Insere uma lista no final de outra lista</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20,100]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            l.extend([5,6,15])
+                        </code>
+                        <code class="text-info">
+                            # Adiciona lista no final da outra lista
+                        </code>
+                        <br>
+                        <code class="text-secondary ">
+                            print(l)
+                        </code>
+                        <code class="text-info">
+                            # Saida : [10,40,30,20,100,5,6,15] já com a outra lista já adicionado
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">del</code></td>
+                    <td><code class="text-info"># Remove um elemento da lista, dado seu indice</code></td>
+                    <td>
+                        <code class="row "></code>
+                        <code class="row ">
+                                                            
+                        </code>
+                        <code class="row ">
+                                                        
+                        </code>
+                    </td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20,100,5,6,15]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            del l[0]
+                        </code>
+                        <code class="text-info">
+                            # Deleta o elemento com o indice
+                        </code>
+                        <br>
+                        <code class="text-secondary ">
+                            print(l)
+                        </code>
+                        <code class="text-info">
+                            # Saida : [40,30,20,100,5,6,15] sem o elemento 10 que estava no indice 0
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">in</code></td>
+                    <td><code class="text-info"># Verifica se o valor pertence a lista</code></td>
+                    <td class="text-start">
+                        <code class="text-secondary">l=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            10 in l 
+                        </code>
+                        <code class="text-info">
+                            # Saida : True, pois 10 está na lista
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="text-secondary">sort</code></td>
+                    <td><code class="text-info"># Ordena os calores da lista em ordem crescente</code></td>
                     <td>
                         <code class="row ">l=[10,40,30,20]</code>
                         <code class="row ">
-                            max(l) # Retorna 40  
-                            </code>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>sum</code></td>
-                    <td><code class="text-primary"># Retorna a soma dos elementos da lista</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20]</code>
-                        <code class="row ">
-                            sum(l) # Retorna  100
-                            </code>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>append</code></td>
-                    <td><code class="text-primary">Adiciona um novo valor no final da lista</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20]</code>
-                        <code class="row ">
-                            l.append(100) # Adiciona o valor 100 ao final da lista
-                        </code>
-                        <code class="row ">
-                            print(l) # Retorna a lista [10,40,30,20,100] com o valor já adicionado
+                            l.sort() 
                         </code>
                         </div>
                     </td>
-                </tr>
-                <tr>
-                    <td><code>extend</code></td>
-                    <td><code class="text-primary"># Insere uma lista no final de outra lista</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20,100]</code>
-                        <code class="row ">
-                            l.extend([5,6,15]) # Adiciona lista no final da lista l
+                    <td class="text-start">
+                        <code class="text-secondary">lista=[10,40,30,20]</code>
+                        <br>
+                        <code class="text-secondary ">
+                            lista.sort()
                         </code>
-                        <code class="row ">
-                            print(l) # Retorna lista [10,40,30,20,100,5,6,15] já com os elementos adicionados
+                        <code class="text-info">
+                            # Ordena em ordem crescente
                         </code>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>del</code></td>
-                    <td><code class="text-primary"># Remove um elemento da lista, dado seu indice</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20,100,5,6,15]</code>
-                        <code class="row ">
-                            del l[0] # Deleta o elemento com o indice                               
+                        <br>
+                        <code class="text-secondary ">
+                            print(lista)
                         </code>
-                        <code class="row ">
-                            print(l) # Retorna a lista [40,30,20,100,5,6,15] sem o elemento 10 que estava no indice 0                          
+                        <code class="text-info">
+                            # Saida :[10,20,30,40] já a lista em ordem crescente.
                         </code>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>in</code></td>
-                    <td><code class="text-primary"># Verifica se o valor pertence a lista</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20]</code>
-                        <code class="row ">
-                            10 in l # Retorna  True
-                            </code>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>sort</code></td>
-                    <td><code class="text-primary"># Ordena os calores da lista em ordem crescente</code></td>
-                    <td>
-                        <code class="row ">l=[10,40,30,20]</code>
-                        <code class="row ">
-                            l.sort() # Ordena em ordem crescente
-                        </code>
-                        </div>
                     </td>
                 </tr>
             </tbody>
