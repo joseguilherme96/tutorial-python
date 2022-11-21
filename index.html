@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Python</title>
     <link href="index.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="container text-center">
@@ -36,6 +37,14 @@
         <label>Tempo de Leitura :</label><p>1hr<icon></icon></p>
         <label>Avaliação :</label><img src="" alt="nota">
     </section>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <input type="text" class="form-control" placeholder="Pesquise sobre algum conteudo"/>
+        </div>
+        <div class="col-1 p-2">
+            <i class="bi-search "></i>
+        </div>
+    </div>
     <div class="container text-center">
     <div class="row ">
         <div class="col">
@@ -50,13 +59,19 @@
     </div>
     <div class="row">
         <div class="col">
-            <img src="img/tupla.png" class="img-fluid" alt="" srcset="">
+            <a href="#tupla">
+                <img src="img/tupla.png" class="img-fluid" alt="" srcset="">
+            </a>
         </div>
         <div class="col">
-            <img src="img/dicionario.png" class="img-fluid" alt="" srcset="">
+            <a href="#dicionario">
+                <img src="img/dicionario.png" class="img-fluid" alt="" srcset="">
+            </a>
         </div>
         <div class="col">
-            <img src="img/lista.png" class="img-fluid" alt="" srcset="">
+            <a href="#lista">
+                <img src="img/lista.png" class="img-fluid" alt="" srcset="">
+            </a>
         </div>
     </div>
     <div class="container text-center">
@@ -101,7 +116,7 @@
             </p>
     </div>
     </section>
-    <section>
+    <section id="lista">
         <div class="row bg-secondary" >
             <div class="col-11">
             <h2 class=" text-warning ">Lista</h2>
@@ -242,18 +257,183 @@
             </tbody>
         </table>
     </section>
-    <section>
-        <div>
-            <h2>Tuplas</h2>
-            <icon></icon>
+    <section id="tupla">
+        <div class="row bg-secondary" >
+            <div class="col-11">
+            <h2 class=" text-warning ">Tuplas</h2>
+            </div>
+           <div class="col-1 bg-warning"></div>
         </div>
+        <p class="text-start">
+            As tuplas são diferentes de listas, pois uma vez criadas, não aceitam modificações.
+            Exitem duas formas de declarar uma tupla, uma mais detalhada que a outra.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                tupla =() # Forma implicita
+            </code>
+            <code class="row">
+                tupla =tuple() # Forma Explicita
+            </code>
+        </p>
+        <p class="text-start">
+            Agora podemos criar uma tupla com valores :
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                tupla =("Arroz","Feijão","Macarrão") # Forma implicita
+            </code>
+        </p>
+        <p class="text-start">
+            Podemos acessar um elemento na tupla da mesma forma que fazemos na lista, apotando o seu indice.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                tupla =("Arroz","Feijão","Macarrão") # Forma implicita
+            </code>
+            <code class="row">
+                print(tupla[0]) Retorna :  Arroz
+            </code>
+        </p>
+        <p class="text-start">
+            Podemos acessar ainda mais de um elemento na tupla informando o indice inicial e final.
+        </p>  
+        <p class="text-start bg-dark ">
+        <code class="row">
+        print(tupla[0:2]) Retorna :  Arroz,Feijão, Macarrão
+        </code>
+        </p> 
     </section>
-    <section>
-        <div>
-            <h2>Dicionários</h2>
-            <icon></icon>
+    <section id="dicionario">
+        <div class="row bg-secondary" >
+            <div class="col-11">
+            <h2 class=" text-warning ">Dicionário</h2>
+            </div>
+           <div class="col-1 bg-warning"></div>
         </div>
+        <p class="text-start">
+            Dicionários são estruturas de chave-valor, ou seja, os valores(dados) estão sempre associados a uma chave.
+        </p>
+        <h3 class="row text-start text-warning pt-2" >Declarar um dicionáro</h3>
+        <p class="text-start">Assim como lista e tuplas. os dicionários podem ser declarados de forma Implicita ou Explicita</p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                dicionario = {} # Forma Implicita      
+            </code>
+            <code class="row">
+                dicionario = dict({}) # Forma Explicita    
+            </code>
+        </p>
+        <p class="text-start">
+           Ao contrário das listas e tuplas, que seu indices não precisam ser declarados para criar uma lista ou tupla, apenas quando for acessar é necessário informa-lo. O Dicionário quando criado, é necessário associar seu indice ou chave para ser criado.
+        </p> 
+        <p class="text-start bg-dark ">
+            <code class="row">
+                localizacao = {
+                    "Lat": -22.817087,
+                    "Long": -47.069750
+                }
+                    
+            </code>
+            </p>
+            <p class="text-start">
+                Como podemos observar no códigos acima os valores "-22.817087,-47.069750" foram associados as chaves "Lat,Long" respectivamente.
+             </p> 
     </section>
+    <section id="arquivos">
+        <div class="row bg-secondary" >
+            <div class="col-11">
+            <h2 class=" text-warning ">Arquivos</h2>
+            </div>
+           <div class="col-1 bg-warning"></div>
+        </div>
+        <p class="text-start">
+            Python dá a possibilidade de trabalharmos com arquivos de texto, sejam eles os mais variados possível, como arquivos de uma liguagem de programação como python ou html, como também arquivos de texto como de word ou de um bloco de notas, arquivos csv, tudo que se possa imaginar que são criados através de texto.
+            O python consegue acessar estes arquivos e consegue executar operações como leitura e escrita. 
+        </p>
+        <p class="text-start">
+            A função open() é responsável por abrir um arquivo ou criar um se o arquivo não existe.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                arquivo = open("nomedoarquivo.txt","r",encoding="utf-8") # Função responsável por abrir um arquivo de texto
+            </code>
+        </p>
+        <p class="text-start p-1">
+             Na função <code>open()</code> passamos três parâmetros :
+        </p>
+        <ul class="text-start p-1">
+            <li class="p-1">
+                <b>1º nome do arquivo</b> que podem ser nos diferentes formatos como <b>html,py,csv.txt,doc</b> , entre outros.
+            </li> 
+            <li class="p-1">
+                <b>2º Permissão</b> – Quais serão as permissões que este arquivos podem executar quando abertos, ou seja “w” para escrever, “r” para ler, ”r+” para ler e escrever, e “a” para anexar no final do documento.
+                <ul>
+                    <li class="p-1"><b><code>w</code></b> – Sempre vai criar um arquivo novo se o arquivo não existir, ou vai sobrescrever o arquivo caso já exija, ou seja toda informação anterior será perdida.</li>
+                    <li class="p-1"><b><code>r</code></b> – permite apenas a leitura do arquivo, se o arquivo não existir apresentará um erro.</li>
+                    <li class="p-1"><b><code>r+</code></b> - permite a leitura do arquivo ou a escrita nele, não subscreve, mas todos os textos são adicionados no início. Se o arquivo não existir também cria um. </li>
+                    <li class="p-1"><b><code>a</code></b> – permite adicionar um texto no final do arquivo. Não subscreve.  </li>
+                </ul>
+            </li>
+            <li class="p-1">
+                <b>3º Encoding</b> -  Como sabemos que o conjunto de caracteres muda de acordo com a nacionalidade, utilizamos <b>"utf-8”</b> para nosso padrão.
+            </li>  
+        </ul>
+        <p class="text-start">
+            O Nosso exemplo abaixo vamos abrir o arquivo <b>texto.txt</b> no modo leitura passando como parâmetro a letra <code>r</code> e também o tipo de caractere como <b>UTF-8</b>. Outros parâmetros podem ser passados conforme as permissão acima.
+        </p>
+        <p class="text-start">
+            O arquivo <b>texto.txt</b> deve estar escrito algo e também deve estar salvo no mesmo local do seu arquivo python que está sendo executado.
+        </p>
+        <div class="col-12">
+        <picture>
+            <source srcset="img/leitura-arquivo-txt.png" media="(min-width:574px)" class="img-fluid" width="1000">
+            <img src="img/leitura-arquivo-txt-mobile.png" class="img-fluid" width="300">
+        </picture>
+        
+        </div>
+        <p class="text-start">
+            Após aplicarmos a função <code>open()</code>, vamos chamar metodos responsáveis por ler ou escrever de acordo com a permissão que foi passada como parâmentro para a função <code>open()</code>
+        </p>
+        <p class="text-start">
+            Para leitura de um arquivo utilizamos o metódo <code>read()</code>.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            </code>
+            <code class="row">
+                ler = arquivoTexto.read() # Acionammos a variável que armazenou a abertura do arquivo + o método read().
+            </code>
+        </p>
+        <p class="text-start">
+            Para escrita de um arquivo utilizamos o metódo <code>write()</code> passando como parâmetro seu texto que deve ser escrito no arquivo.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            </code>
+            <code class="row">
+                escrever = arquivoTexto.write("texto...") # Acionammos a variável que armazenou a abertura do arquivo + o método write().
+            </code>
+        </p>
+        <p class="text-start">
+            Para exibir o que foi lido ou escrito em um arquivo, basta chamar a função <code>print()</code> passando como parâmetro a varivel que armazenou a escrita ou leitura do documento.
+        </p>
+        <p class="text-start bg-dark ">
+            <code class="row">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            </code>
+            <code class="row">
+                escrever = arquivoTexto.write("texto...") # Acionammos a variável que armazenou a abertura do arquivo + o método write().
+            </code>
+            <code class="row">
+                print(escrever) # Saida : texto do arquivo    
+            </code>
+        </p>
+        
+    </section>
+
 </div>
 </body>
 </html>
