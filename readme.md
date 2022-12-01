@@ -25,3 +25,5 @@ A página foi desenvolvida utlizando a linguagem de marcação HTML e o framewor
 * Já ter um curso introdutório a Python
 * Uma IDE que interprete códigos em Python.
 
+# Idealizador do Projeto
+O projeto foi desenvolvido como trabalho do Curso de Sistemas Para Internet - Fatec São roque
