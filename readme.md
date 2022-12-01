@@ -1,5 +1,14 @@
 # TUTORIAL PYTHON
-## Objetivo
+## Objetivo do projeto
+É escrever um tutorial sobre python em uma página web integrando todos os conhecimentos adiquiridos no curso de Sistemas Para Internet - Fatec São Roque.
+Os principais conhecimentos que foram necessários para desenvolvimento do projeto:
+* HTML - Linguagem de Marcação de HiperTexto(Tradução PT-BR)
+* Framework Bootstrap
+* Css - Cascading Style Sheets
+* Linguagem Markdown
+* Conhecimento sobre alguns tópicos em python que veremos adiante para escrever o tutorial em python.
+
+## Objetivo do Tutorial
 Objetivo deste tutorial é para que você tenha conceitos básicos em :
 * Funções
 * Matrizes
@@ -22,8 +31,8 @@ A página foi desenvolvida utlizando a linguagem de marcação HTML e o framewor
 * Abra o arquivo index.html no seu navegador.
 
 # Requisitos para Realizar o Tutorial
-* Já ter um curso introdutório a Python
+* Já ter um curso introdutório a Python.
 * Uma IDE que interprete códigos em Python.
 
 # Idealizador do Projeto
-O projeto foi desenvolvido como trabalho do Curso de Sistemas Para Internet - Fatec São roque
+O projeto foi desenvolvido como trabalho do Curso de Sistemas Para Internet - Fatec São roque.
