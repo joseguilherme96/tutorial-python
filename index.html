@@ -7,8 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <style>
-        nav {
+        nav,footer {
             background-color: #283755ff;
+        }
+        footer{
+            width: 100%;
+            height: 300px;
         }
     </style>
 </head>
@@ -19,29 +23,29 @@
            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-light">
-                <li class="nav-item ps-1">
-                    <a class="nav-link actives text-light" aria-current="page" href="/projeto-integrador-II/index.php">Funções</a>
+                <li class="nav-item ps-lg-1">
+                    <a class="nav-link actives text-light" aria-current="page" href="#funcoes">Funções</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Matrizes</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#matrizes">Matrizes</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Ordenação</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#ordenacao">Ordenação</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Tuplas</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#tupla">Tuplas</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Dicionário</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#dicionario">Dicionário</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Lista</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#lista">Lista</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Algoritmos</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#busca">Algoritmos de busca</a>
                 </li> 
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="/projeto-integrador-II/index.php">Arquivos</a>
+                    <a class="nav-link active text-light" aria-current="page" href="#arquivos">Arquivos</a>
                 </li>  
             </ul>
           </div>
@@ -121,16 +125,16 @@
         </div>
         <p class="text-start"> 
             A funções facilitam na organização e otimização do código.
-             Podemos criar funções para difersas finalizades, 
+             Podemos criar funções para diversas finalidades, 
              uma vez criadas podem ser usadas em diferentes
               partes do código facilitando na codificação.
         </p>
         <p class="text-start"> 
-            Em python para definirmos uma função utilizamos a palavra <b>def</b>. E em seguida sempre acompanhado dos parênteses e dois pontos. 
+            Em python para definirmos uma função utilizamos a palavra <b>def</b>, o nome da função, neste caso vamos criar a função somar. E em seguida acompanhada dos parênteses e dois pontos. 
         </p>
         <p class="text-start bg-dark ">
             <code class="text-secondary">
-                def():
+                def somar():
             </code>
             <code class="text-info">
                 # Definindo uma função
@@ -138,13 +142,13 @@
         </p>
         <p class="text-start"> 
             Toda função possui parâmetros, que são colocados dentro dos parentêses, 
-            responsáveis por receber valores quando a função é chamada, podemos passa 
+            responsáveis por receber valores quando a função é chamada, podemos passar 
             os diversos tipo de dados para que a função processe estes dados e retorne
             algum valor.
         </p>
         <p class="text-start bg-dark ">
             <code class="text-secondary">
-                def(valor1,valor2):
+                def somar(valor1,valor2):
             </code>
             <code class="text-info">
                 # A função irá receber os valores valor1,valor2 quando chamada.
@@ -185,14 +189,65 @@
             return resultado
     </code>
     </p>
+    <p class="text-start"> 
+        Após a função montada, é necessário chama-la para que  a função seja executada, caso contrário o programa não irá processar esta função.
+    </p>
+    <p class="text-start bg-dark">
+        <code class="text-secondary d-block">
+            def somar(valor1,valor2):
+        </code>
+        <code class="text-info d-block px-5">
+                # processamento
+        </code>
+        <code class="text-secondary px-5 d-block">
+                resultado = valor1 + valor2
+        </code>
+        <code class="text-secondary px-5 d-block">
+                return resultado
+        </code>
+        <code class="text-secondary px-1">
+                somar(2,3)
+        </code>
+        <code class="text-info">
+            # Chamando a função somar e passa como parâmetro os valores 2 e 3.
+        </code>
+    </p>
+    <p class="text-start">Porém nada é exibido, por mais que a 
+        função somar retorne um valor, pois não foi chamado a função
+         <code>print()</code> que ira exibir o 
+         valor retornado da função, então vamos passar a função somar()
+         como parâmetro na função <code>print()</code>. Assim temos uma função completa para somar dois valores.</p>
+         <p class="text-start bg-dark">
+            <code class="text-secondary d-block">
+                def somar(valor1,valor2):
+            </code>
+            <code class="text-info d-block px-5">
+                    # processamento
+            </code>
+            <code class="text-secondary px-5 d-block">
+                    resultado = valor1 + valor2
+            </code>
+            <code class="text-secondary px-5 d-block">
+                    return resultado
+            </code>
+            <code class="text-secondary px-1">
+                    print(somar(2,3))
+            </code>
+            <code class="text-info">
+                # Chamando a função somar, ela se torna parâmetro da função print.
+                Saida : 5
+            </code>
+        </p>
     </section>
     <section>
-        <div>
-            <h2>Estrutura de dados</h2>
-            <icon></icon>
+        <div class="row bg-secondary" >
+            <div class="col-11">
+            <h2 class=" text-warning ">Estrutura de Dados</h2>
+            </div>
+           <div class="col-1 bg-warning"></div>
         </div>
-        <p class=" text-left">
-            Existem estrutura de dados nos mais diversos tipos de linguagem como javascript,java,php e entre outras.
+        <p class=" text-start">
+            Existem estrutura de dados nos mais diversos tipos de linguagem como javascript, java, php e entre outras.
              O que muda é a maneira como são declaradas. Logo abaixo temos um exemplo que declara uma lista, uma tupla ou um dicionário de forma mais simples.
         </p>
         <div class="bg-dark text-start">
@@ -209,7 +264,7 @@
             <code class="text-info"># Declaração de um dicionário</code>
         </p>
     </div>
-        <p>
+        <p class="text-start">
             Podemos ainda declarar de uma forma mais detalhada deixando explicito a extrutura que está sendo definida.
         </p>
         <div class="bg-dark text-start">
@@ -464,38 +519,62 @@
             Exitem duas formas de declarar uma tupla, uma mais detalhada que a outra.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                tupla =() # Forma implicita
+            <code class="text-secondary">
+                tupla =() 
             </code>
-            <code class="row">
-                tupla =tuple() # Forma Explicita
+            <code class="text-info">
+                # Forma implicita
+            </code>
+            <br>
+            <code class="text-secondary">
+                tupla =tuple() 
+            </code>
+            <code class="text-info">
+                # Forma Explicita
             </code>
         </p>
         <p class="text-start">
             Agora podemos criar uma tupla com valores :
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                tupla =("Arroz","Feijão","Macarrão") # Forma implicita
+            <code class="text-secondary">
+                tupla =("Arroz","Feijão","Macarrão")
+            </code>
+            <code class="text-info">
+                # Forma implicita
             </code>
         </p>
         <p class="text-start">
             Podemos acessar um elemento na tupla da mesma forma que fazemos na lista, apotando o seu indice.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                tupla =("Arroz","Feijão","Macarrão") # Forma implicita
+            <code class="text-secondary">
+                tupla =("Arroz","Feijão","Macarrão") 
             </code>
-            <code class="row">
-                print(tupla[0]) Retorna :  Arroz
+            <code class="text-info">
+                # Forma implicita
+            </code>
+            <br>
+            <code class="text-secondary">
+                print(tupla[0]) 
+            </code>
+            <code class="text-info">
+                # Saída :  Arroz
             </code>
         </p>
         <p class="text-start">
             Podemos acessar ainda mais de um elemento na tupla informando o indice inicial e final.
         </p>  
         <p class="text-start bg-dark ">
-        <code class="row">
-        print(tupla[0:2]) Retorna :  Arroz,Feijão, Macarrão
+            <code class="text-secondary">
+                tupla =("Arroz","Feijão","Macarrão") 
+            </code>
+            <br>
+        <code class="text-secondary">
+        print(tupla[0:2]) 
+        </code>
+        <code class="text-info">
+            # Saída :  ('Arroz','Feijão', 'Macarrão')
         </code>
         </p> 
     </section>
@@ -512,18 +591,25 @@
         <h3 class="row text-start text-warning pt-2" >Declarar um dicionáro</h3>
         <p class="text-start">Assim como lista e tuplas. os dicionários podem ser declarados de forma Implicita ou Explicita</p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                dicionario = {} # Forma Implicita      
+            <code class="text-secondary">
+                dicionario = {}     
             </code>
-            <code class="row">
-                dicionario = dict({}) # Forma Explicita    
+            <code class="text-info">
+                # Forma Implicita  
             </code>
+            <br><code class="text-secondary">
+                dicionario = dict({})    
+            </code>
+            <code class="text-info">
+                # Forma Explicita  
+            </code>
+            <br>
         </p>
         <p class="text-start">
            Ao contrário das listas e tuplas, que seu indices não precisam ser declarados para criar uma lista ou tupla, apenas quando for acessar é necessário informa-lo. O Dicionário quando criado, é necessário associar seu indice ou chave para ser criado.
         </p> 
         <p class="text-start bg-dark ">
-            <code class="row">
+            <code class="text-secondary">
                 localizacao = {
                     "Lat": -22.817087,
                     "Long": -47.069750
@@ -550,8 +636,11 @@
             A função open() é responsável por abrir um arquivo ou criar um se o arquivo não existe.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                arquivo = open("nomedoarquivo.txt","r",encoding="utf-8") # Função responsável por abrir um arquivo de texto
+            <code class="text-secondary">
+                arquivo = open("nomedoarquivo.txt","r",encoding="utf-8") 
+            </code>
+            <code class="text-info">
+                # Função responsável por abrir um arquivo de texto
             </code>
         </p>
         <p class="text-start p-1">
@@ -588,47 +677,78 @@
         
         </div>
         <p class="text-start">
-            Após aplicarmos a função <code>open()</code>, vamos chamar metodos responsáveis por ler ou escrever de acordo com a permissão que foi passada como parâmentro para a função <code>open()</code>
+            Após aplicarmos a função <code>open()</code>, vamos chamar métodos de acordo com a permissão passada como parâmetro na funçaõ <code>open()</code>
         </p>
         <p class="text-start">
             Para leitura de um arquivo utilizamos o metódo <code>read()</code>.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            <code class="text-secondary">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") 
             </code>
-            <code class="row">
-                ler = arquivoTexto.read() # Acionammos a variável que armazenou a abertura do arquivo + o método read().
+            <code class="text-info">
+                # Abertura do arquivo
+            </code>
+            <br>
+            <code class="text-secondary">
+                ler = arquivoTexto.read() 
+            </code>
+            <code class="text-info">
+                # Acionamos a variável que armazenou a abertura do arquivo + o método read().
             </code>
         </p>
         <p class="text-start">
             Para escrita de um arquivo utilizamos o metódo <code>write()</code> passando como parâmetro seu texto que deve ser escrito no arquivo.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            <code class="text-secondary">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") 
             </code>
-            <code class="row">
-                escrever = arquivoTexto.write("texto...") # Acionammos a variável que armazenou a abertura do arquivo + o método write().
+            <code class="text-info">
+                # Abertura do arquivo
+            </code>
+            <br>
+            <code class="text-secondary">
+                escrever = arquivoTexto.write("texto...") 
+            </code>
+            <code class="text-info">
+                # Acionammos a variável que armazenou a abertura do arquivo + o método write().
             </code>
         </p>
         <p class="text-start">
-            Para exibir o que foi lido ou escrito em um arquivo, basta chamar a função <code>print()</code> passando como parâmetro a varivel que armazenou a escrita ou leitura do documento.
+            Para exibir o que foi lido ou escrito em um arquivo, basta chamar a função <code>print()</code> passando como parâmetro a variável que armazenou a escrita ou leitura do documento. Neste caso vamos exibir a variavel <b>escrever</b> que armazenou a escrita em um arquivo.
         </p>
         <p class="text-start bg-dark ">
-            <code class="row">
-                arquivoTexto = open("texto.txt","r",encoding="utf-8") #Abertura do arquivo
+            <code class="text-secondary">
+                arquivoTexto = open("texto.txt","r",encoding="utf-8") 
             </code>
-            <code class="row">
-                escrever = arquivoTexto.write("texto...") # Acionammos a variável que armazenou a abertura do arquivo + o método write().
+            <code class="text-info">
+                # Abertura do arquivo
             </code>
-            <code class="row">
-                print(escrever) # Saida : texto do arquivo    
+            <br>
+            <code class="text-secondary">
+                escrever = arquivoTexto.write("texto...") 
+            </code>
+            <code class="text-info">
+                # Acionamos a variável que armazenou a abertura do arquivo + o método write().
+            </code>
+            <br>
+            <code class="text-secondary">
+                print(escrever)     
+            </code>
+            <code class="text-info">
+                # Saida : texto do arquivo
             </code>
         </p>
         
     </section>
-
 </div>
+</div>
+<footer class="text-center">
+    <div class="p-5"></div>
+    <div class="p-5"></div>
+    <div class="p-4"></div>
+    <small class="text-light">&copy;Desenvolvido por José Guilherme</small>
+</footer>
 </body>
 </html>
