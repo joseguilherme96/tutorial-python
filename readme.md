@@ -14,10 +14,10 @@ Objetivo deste tutorial é para que você tenha conceitos básicos em :
 A pagina é responsiva, ou seja pode ser visualizado em qualquer dispositivo.
 
 ## Tecnonologia Utilizada
-A página foi desenvolvida em utlizando a linguagem de marcação HTML e o framework BootStrap.
+A página foi desenvolvida utlizando a linguagem de marcação HTML e o framework Bootstrap.
 
 ## Intalação do Projeto
-* Baixe a pasta do projeto pelo site do GitHub e descompacte em seu computador, ou clone a pasta pelo endereço disponibilizado pelo GitHub.
+* Baixe a pasta do projeto pelo site do GitHub e descompacte em seu computador ou clone a pasta pelo endereço disponibilizado pelo GitHub.
 * Caso tenha baixado direto pelo site, descompacte-a pasta.
 * Abra o arquivo index.html no seu navegador.
 
